@@ -1,1 +1,7 @@
-
+#about{
+  
+  padding: 10px;
+    display: table;
+    width: 100%;
+    height: auto;
+}
