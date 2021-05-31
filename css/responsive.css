@@ -1,32 +1,6 @@
-
-/* Diseño para celulares */
-#columna1, #columna2, #columna3 {
-	float:none;
-	width:100%;
-}
-
-/* Diseño para tabletas */ 
-@media screen and (min-width: 800px) {
-	#columna1, #columna2 {
-		float:left;
-		width:50%;
+@media only screen and (min-width: 768px) {
+	.nav-box {
+		display:block !important;
+		height:auto !important;
 	}
-}
 
-/* Diseño para PC */ 
-@media screen and (min-width: 1025px) {
-	#columna1, #columna2, #columna3 {
-	float:left;
-	width:33%;
-}
-@media screen and (max-width: 480px){
-    #encabezado{
-        height: auto;
-    }
-    #contenido{
-        width: auto;
-    }
-    #barra_lateral{
-        display:none;
-    }
-}
