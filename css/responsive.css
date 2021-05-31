@@ -1,5 +1,5 @@
 @media only screen and (min-width: 768px) {
-	.nav-box {
+	.collapse navbar-collapse {
 		display:block !important;
 		height:auto !important;
 	}
