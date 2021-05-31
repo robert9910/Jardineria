@@ -157,6 +157,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .intro {
 	display: table;
 	width: 100%;
+	height: auto;
 	padding: 0;
 	background: url(../img/intro-bg.jpg) top center no-repeat;
 	background-color: #e5e5e5;
@@ -164,11 +165,6 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
-	
-	max-width: 960px;
-	margin: 0 auto;
-	width: 100%;
-	height: auto;
 }
 .intro .overlay {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,70ad47+100&0.6+0,0.4+100 */
