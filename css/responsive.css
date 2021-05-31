@@ -1,20 +1,20 @@
-*{
-  
-  position:relative;
+@media only screen and (min-width: 768px) {
+	*{
+		position:absolute;}
+}
+@media only screen and (max-width: 1440px) {
+	*{position:obsolute;}
+}
+@media only screen and (max-width: 1199px) {
+	*{position: absolute;}
+}
+@media only screen and (max-width: 575px) {
+	*{position:absolute;}
+}
+@media only screen and (max-width: 460px) {
+	*{position:relative;}
+}
+@media only screen and (max-width: 320px) {
+	*{position:relative;(
 }
 
-#about{
-  
-  padding: 10px;
-    display: table;
-    width: 100%;
-    height: auto;
-}
-@media screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape){
-       .container
-       {
- 	      font-size:1.2em;
-	      line-height:1.5em;
-
-	}
- }
