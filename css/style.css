@@ -154,18 +154,15 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	outline-offset: none;
 }
 /* Header Section */
-.intro {
-	display: table;
-	width: 100%;
-	height: auto;
-	padding: 0;
-	background: url(../img/intro-bg.jpg) top center no-repeat;
-	background-color: #e5e5e5;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	-o-background-size: cover;
-	
+.intro{
+background-image: url(../img/intro-bg.jpg);
+background-image: no-repeat;
+background-image: fixed;
+background-image: center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
 .intro .overlay {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,70ad47+100&0.6+0,0.4+100 */
