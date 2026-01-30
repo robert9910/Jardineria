@@ -410,6 +410,22 @@ nav a {
     }
 }
 
+@media(max-width:600px){
+
+    .trust-badge-inner{
+        width:190px;
+        padding:8px 10px;
+        gap:10px;
+    }
+
+    .trust-icon{
+        width:28px;
+        height:28px;
+        font-size:14px;
+    }
+}
+
+
 /* ================= SERVICES ================= */
 
 .services{
@@ -465,6 +481,30 @@ nav a {
     color:#555;
 }
 
+@media(max-width:600px){
+
+    .service-card{
+        padding:25px 18px;
+        border-radius:18px;
+    }
+
+    .service-icon{
+        width:55px;
+        height:55px;
+        font-size:24px;
+        margin-bottom:18px;
+    }
+
+    .service-card h3{
+        font-size:18px;
+    }
+
+    .service-card p{
+        font-size:14px;
+    }
+}
+
+
 /* ================= TESTIMONIOS ================= */
 
 .testimonials{
@@ -491,6 +531,24 @@ nav a {
     border-radius:20px;
     box-shadow:0 15px 40px rgba(0,0,0,.05);
     scroll-snap-align:center;
+}
+
+@media(max-width:600px){
+
+    .testimonial{
+        min-width:240px;
+        padding:22px;
+    }
+
+    .testimonial p{
+        font-size:14px;
+    }
+
+    .avatar{
+        width:50px;
+        height:50px;
+        font-size:20px;
+    }
 }
 
 
@@ -639,6 +697,31 @@ nav a {
         grid-template-columns:1fr;
     }
 }
+
+@media(max-width:600px){
+
+    .quote-form{
+        padding:30px 20px;
+        border-radius:18px;
+    }
+
+    .quote-form h3{
+        font-size:22px;
+        text-align:center;
+    }
+
+    .quote-form input,
+    .quote-form textarea{
+        padding:14px;
+        font-size:14px;
+    }
+
+    .file-upload{
+        padding:14px;
+        font-size:14px;
+    }
+}
+
 
 
 /* ================= FOOTER ================= */
@@ -894,11 +977,54 @@ nav a {
 }
 
 @media(max-width:600px){
-    .team-grid{
-        grid-template-columns:1fr;
+
+    .about{
+        padding:60px 6%;
     }
 
-    .about-header h2{
-        font-size:30px;
+    .team-card{
+        padding:25px 18px; /* menos relleno */
+        border-radius:20px;
+    }
+
+    .team-img{
+        width:90px;
+        height:90px;
+        margin-bottom:15px;
+    }
+
+    .team-card h3{
+        font-size:18px;
+    }
+
+    .team-card p{
+        font-size:13px;
+    }
+
+    .skills{
+        font-size:12px;
+        padding:8px 10px;
+        line-height:1.4;
     }
 }
+
+
+
+/* ================= MOBILE FIX GENERAL ================= */
+@media(max-width:600px){
+
+    section{
+        padding-left:6% !important;
+        padding-right:6% !important;
+    }
+
+    h2{
+        font-size:28px !important;
+        line-height:1.2;
+    }
+
+    p{
+        font-size:15px !important;
+    }
+}
+
