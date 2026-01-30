@@ -981,12 +981,16 @@ nav a {
 
 @media(max-width:600px){
 
+    .team-grid{
+        grid-template-columns:1fr; /* 👈 UNA TARJETA POR FILA */
+    }
+
     .about{
         padding:60px 6%;
     }
 
     .team-card{
-        padding:25px 18px; /* menos relleno */
+        padding:25px 18px;
         border-radius:20px;
     }
 
