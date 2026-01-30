@@ -1,94 +1,72 @@
+const carousels = document.querySelectorAll(".carousel");
+let index = 0;
+const total = carousels[0].querySelectorAll(".item").length;
 
-function main() {
-
-(function () {
-   'use strict';
-   
-  	$('a.page-scroll').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top - 50
-            }, 900);
-            return false;
-          }
-        }
-      });
-
-	
-    // Show Menu on Book
-    $(window).bind('scroll', function() {
-        var navHeight = $(window).height() - 500;
-        if ($(window).scrollTop() > navHeight) {
-            $('.navbar-default').addClass('on');
-        } else {
-            $('.navbar-default').removeClass('on');
-        }
+setInterval(() => {
+    carousels.forEach(carousel => {
+        const items = carousel.querySelectorAll(".item");
+        items[index].classList.remove("active");
     });
 
-    $('body').scrollspy({ 
-        target: '.navbar-default',
-        offset: 80
+    index = (index + 1) % total;
+
+    carousels.forEach(carousel => {
+        const items = carousel.querySelectorAll(".item");
+        items[index].classList.add("active");
     });
 
-	// Hide nav on click
-  $(".navbar-nav li a").click(function (event) {
-    // check if window is small enough so dropdown is created
-    var toggle = $(".navbar-toggle").is(":visible");
-    if (toggle) {
-      $(".navbar-collapse").collapse('hide');
+}, 2500);
+
+
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const track = document.querySelector(".testimonials-track");
+    if (!track) return;
+
+    let cards = Array.from(track.children);
+    const gap = 30; // debe coincidir con el CSS
+    const cloneCount = 3;
+
+    // Clonar las primeras tarjetas
+    for (let i = 0; i < cloneCount; i++) {
+        track.appendChild(cards[i].cloneNode(true));
     }
-  });
-	
-  	// Portfolio isotope filter
-    $(window).load(function() {
-        var $container = $('.portfolio-items');
-        $container.isotope({
-            filter: '*',
-            animationOptions: {
-                duration: 750,
-                easing: 'linear',
-                queue: false
-            }
-        });
-        $('.cat a').click(function() {
-            $('.cat .active').removeClass('active');
-            $(this).addClass('active');
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false
-                }
-            });
-            return false;
-        });
 
+    cards = Array.from(track.children);
+
+    let index = 0;
+
+    setInterval(() => {
+        const cardWidth = cards[0].offsetWidth + gap;
+        index++;
+
+        track.style.transition = "transform 0.8s cubic-bezier(.4,0,.2,1)";
+        track.style.transform = `translateX(-${index * cardWidth}px)`;
+
+        // Reinicio invisible
+        if (index >= cards.length - cloneCount) {
+            setTimeout(() => {
+                track.style.transition = "none";
+                index = 0;
+                track.style.transform = "translateX(0px)";
+            }, 850);
+        }
+
+    }, 4000);
+
+});
+
+
+const form = document.querySelector(".contact-form");
+
+const formObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            form.style.opacity = 1;
+            form.style.transform = "translateY(0)";
+        }
     });
-	
-    // Nivo Lightbox 
-    $('.portfolio-item a').nivoLightbox({
-            effect: 'slideDown',  
-            keyboardNav: true,                            
-        });
-		
-	// Testimonial Slider
-	  	$(document).ready(function() {
-	      $("#testimonial").owlCarousel({
-        navigation : false, // Show next and prev buttons
-        slideSpeed : 300,
-        paginationSpeed : 400,
-        singleItem:true
-        });
+},{ threshold:0.3 });
 
-  	});	
-
-}());
-
-
-}
-main();
+formObserver.observe(form);
