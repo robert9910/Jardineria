@@ -976,37 +976,6 @@ nav a {
     }
 }
 
-@media(max-width:600px){
-
-    .about{
-        padding:60px 6%;
-    }
-
-    .team-card{
-        padding:25px 18px; /* menos relleno */
-        border-radius:20px;
-    }
-
-    .team-img{
-        width:90px;
-        height:90px;
-        margin-bottom:15px;
-    }
-
-    .team-card h3{
-        font-size:18px;
-    }
-
-    .team-card p{
-        font-size:13px;
-    }
-
-    .skills{
-        font-size:12px;
-        padding:8px 10px;
-        line-height:1.4;
-    }
-}
 
 
 
@@ -1027,4 +996,5 @@ nav a {
         font-size:15px !important;
     }
 }
+
 
