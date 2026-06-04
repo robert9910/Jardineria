@@ -2,365 +2,467 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Pro Tareas — Asesoría Académica Profesional</title>
+<title>ProTareas — Asesoría Académica Premium</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Tareas, exámenes, proyectos y clases online. Servicio académico confiable, puntual y profesional.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="header">
-    <a href="#" class="logo">Pro<span>Tareas</span></a>
+<!-- NOISE OVERLAY -->
+<div class="noise"></div>
 
-    <nav>
-        <a href="#servicios">Servicios</a>
-        <a href="#equipo">Equipo</a>
-        <a href="#testimonios">Testimonios</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+<!-- CURSOR -->
+<div class="cur-dot"></div>
+<div class="cur-ring"></div>
 
-    <a href="#contacto" class="btn">Cotizar ahora</a>
+<!-- PROGRESS BAR -->
+<div class="progress-bar"></div>
 
-    <button class="hamburger" aria-label="Menú">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <a href="#" class="logo">Pro<span>Tareas</span></a>
+  <nav class="nav">
+    <a href="#servicios" data-text="Servicios">Servicios</a>
+    <a href="#equipo"    data-text="Equipo">Equipo</a>
+    <a href="#testimonios" data-text="Reseñas">Reseñas</a>
+    <a href="#contacto"  data-text="Contacto">Contacto</a>
+  </nav>
+  <a href="#contacto" class="btn-cta">
+    <span>Cotizar</span>
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+  </a>
+  <button class="hamburger" aria-label="Menú">
+    <span></span><span></span>
+  </button>
 </header>
 
-<!-- Menú móvil -->
-<nav class="mobile-nav">
+<!-- MOBILE NAV -->
+<div class="mobile-overlay" id="mobileOverlay">
+  <nav class="mobile-nav">
     <a href="#servicios">Servicios</a>
     <a href="#equipo">Equipo</a>
-    <a href="#testimonios">Testimonios</a>
-    <a href="#contacto">Contactar por WhatsApp</a>
-</nav>
-
-<!-- ================= HERO ================= -->
-<section class="hero">
-
-    <div class="hero-text">
-
-        <div class="hero-eyebrow">
-            <div class="dot"></div>
-            <span>Disponible ahora</span>
-        </div>
-
-        <h1>Hacemos tus <em>tareas, exámenes</em> y proyectos</h1>
-
-        <!-- Carrusel de servicios -->
-        <div class="carousel-wrap">
-            <div class="items">
-                <div class="item"><div class="icon">📚</div> Tareas universitarias</div>
-                <div class="item"><div class="icon">📝</div> Exámenes y quizzes</div>
-                <div class="item"><div class="icon">📊</div> Proyectos completos</div>
-                <div class="item"><div class="icon">💻</div> Clases online</div>
-            </div>
-        </div>
-
-        <div class="hero-cta">
-            <a href="#contacto" class="btn btn-lg">Solicitar cotización</a>
-            <a href="#servicios" class="btn btn-outline btn-lg">Ver servicios</a>
-        </div>
-
-        <div class="hero-trust">
-            <span class="stars">★★★★★</span>
-            <strong>+200 alumnos</strong>
-            <span>nos recomiendan</span>
-        </div>
-
-    </div>
-
-    <div class="hero-image">
-        <div class="hero-blob"></div>
-
-        <div class="student-frame">
-            <img
-              src="https://i.ibb.co/wFMYxgjc/como-ser-un-buen-estudiante-removebg-preview.png"
-              alt="Estudiante"
-              class="student"
-            >
-        </div>
-
-        <!-- Floating cards -->
-        <div class="float-card card-1">
-            <div class="float-icon">✓</div>
-            <div>
-                <div class="fc-label">Calidad garantizada</div>
-                <div class="fc-value">100% confiable</div>
-            </div>
-        </div>
-
-        <div class="float-card card-2">
-            <div class="float-icon">⚡</div>
-            <div>
-                <div class="fc-label">Tiempo de respuesta</div>
-                <div class="fc-value">Inmediata</div>
-            </div>
-        </div>
-    </div>
-
-</section>
-
-<!-- ================= STATS BAR ================= -->
-<div class="stats-bar">
-    <div class="stat-item">
-        <span class="num" data-value="200">200+</span>
-        <span class="lbl">Alumnos atendidos</span>
-    </div>
-    <div class="stat-item">
-        <span class="num" data-value="4">4</span>
-        <span class="lbl">Especialistas</span>
-    </div>
-    <div class="stat-item">
-        <span class="num" data-value="100">100%</span>
-        <span class="lbl">Entrega puntual</span>
-    </div>
-    <div class="stat-item">
-        <span class="num" data-value="5">5</span>
-        <span class="lbl">Estrellas promedio</span>
-    </div>
+    <a href="#testimonios">Reseñas</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#contacto" class="btn-cta" style="margin-top:8px">Cotizar ahora →</a>
+  </nav>
 </div>
 
-<!-- ================= SERVICIOS ================= -->
-<section class="services" id="servicios">
-    <div class="section-header">
-        <span class="pill">¿Qué ofrecemos?</span>
-        <h2>Todo lo que necesitas para tus materias</h2>
-        <p>Soluciones académicas rápidas, profesionales y 100% confidenciales.</p>
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <!-- Orbs de fondo -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- Grid lines decorativas -->
+  <div class="grid-lines">
+    <div></div><div></div><div></div><div></div><div></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Disponible ahora mismo</span>
+      </div>
+
+      <h1 class="hero-h1">
+        <span class="line" data-line="0">Hacemos tus</span>
+        <span class="line accent" data-line="1">tareas, exámenes</span>
+        <span class="line" data-line="2">y proyectos.</span>
+      </h1>
+
+      <div class="ticker-wrap">
+        <div class="ticker-items">
+          <span>📚 Tareas universitarias</span>
+          <span>📝 Exámenes y quizzes</span>
+          <span>📊 Proyectos completos</span>
+          <span>💻 Clases online</span>
+        </div>
+      </div>
+
+      <p class="hero-sub">Entrega puntual · 100% confidencial · Especialistas reales</p>
+
+      <div class="hero-actions">
+        <a href="#contacto" class="btn-primary magnetic">
+          <span>Solicitar cotización</span>
+          <div class="btn-glow"></div>
+        </a>
+        <a href="#servicios" class="btn-ghost magnetic">Ver servicios</a>
+      </div>
+
+      <div class="social-proof">
+        <div class="avatars-row">
+          <div class="mini-av" style="background:#6366f1">S</div>
+          <div class="mini-av" style="background:#0ea5e9">M</div>
+          <div class="mini-av" style="background:#10b981">A</div>
+          <div class="mini-av" style="background:#f59e0b">K</div>
+        </div>
+        <span><strong>+200 alumnos</strong> confían en nosotros</span>
+        <div class="stars-row">★★★★★</div>
+      </div>
     </div>
 
-    <div class="services-grid">
-
-        <div class="service-card">
-            <div class="service-icon">📚</div>
-            <h3>Tareas</h3>
-            <p>Realizamos tareas de todas las materias con calidad profesional y entregas puntuales.</p>
+    <div class="hero-visual">
+      <!-- Marco circular con imagen -->
+      <div class="student-orbit" id="studentOrbit">
+        <div class="orbit-ring ring-1"></div>
+        <div class="orbit-ring ring-2"></div>
+        <div class="student-circle">
+          <img src="https://i.ibb.co/wFMYxgjc/como-ser-un-buen-estudiante-removebg-preview.png" alt="Estudiante">
         </div>
+      </div>
 
-        <div class="service-card">
-            <div class="service-icon">📝</div>
-            <h3>Exámenes</h3>
-            <p>Resolvemos exámenes, quizzes y pruebas con altos porcentajes de acierto.</p>
+      <!-- Floating glass cards -->
+      <div class="glass-card gc-1" data-depth="1.8">
+        <div class="gc-icon" style="background:linear-gradient(135deg,#10b981,#059669)">✓</div>
+        <div>
+          <div class="gc-sub">Calidad</div>
+          <div class="gc-title">100% Confiable</div>
         </div>
+      </div>
 
-        <div class="service-card">
-            <div class="service-icon">📊</div>
-            <h3>Proyectos</h3>
-            <p>Proyectos académicos completos, bien estructurados y presentables.</p>
+      <div class="glass-card gc-2" data-depth="1.3">
+        <div class="gc-icon" style="background:linear-gradient(135deg,#f59e0b,#d97706)">⚡</div>
+        <div>
+          <div class="gc-sub">Respuesta</div>
+          <div class="gc-title">Inmediata</div>
         </div>
+      </div>
 
-        <div class="service-card">
-            <div class="service-icon">💻</div>
-            <h3>Clases Online</h3>
-            <p>Te ayudamos en clases en vivo y asesorías personalizadas.</p>
+      <div class="glass-card gc-3" data-depth="2.2">
+        <div class="gc-icon" style="background:linear-gradient(135deg,#6366f1,#4f46e5)">🎓</div>
+        <div>
+          <div class="gc-sub">Especialistas</div>
+          <div class="gc-title">Certificados</div>
         </div>
-
+      </div>
     </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>scroll</span>
+  </div>
 </section>
 
-<!-- ================= EQUIPO ================= -->
+<!-- ===== STATS ===== -->
+<section class="stats-section">
+  <div class="stats-inner">
+    <div class="stat-item reveal-up">
+      <span class="stat-num" data-target="200" data-suffix="+">0+</span>
+      <span class="stat-lbl">Alumnos atendidos</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item reveal-up" style="transition-delay:.1s">
+      <span class="stat-num" data-target="4" data-suffix="">0</span>
+      <span class="stat-lbl">Especialistas</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item reveal-up" style="transition-delay:.2s">
+      <span class="stat-num" data-target="100" data-suffix="%">0%</span>
+      <span class="stat-lbl">Entrega puntual</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item reveal-up" style="transition-delay:.3s">
+      <span class="stat-num" data-target="5" data-suffix="★">0★</span>
+      <span class="stat-lbl">Calificación promedio</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICIOS — BENTO GRID ===== -->
+<section class="services-section" id="servicios">
+  <div class="section-label reveal-up">¿Qué hacemos?</div>
+  <h2 class="section-title reveal-up">Todo lo que necesitas,<br><em>en un solo lugar.</em></h2>
+
+  <div class="bento-grid">
+
+    <!-- CARD GRANDE -->
+    <div class="bento-card bento-lg reveal-card" data-delay="0">
+      <div class="bento-glow" style="--glow:#6366f1"></div>
+      <div class="bento-icon-big">📚</div>
+      <h3>Tareas</h3>
+      <p>Realizamos tareas de todas las materias con calidad profesional, citaciones correctas y entregas puntuales.</p>
+      <div class="bento-tag">Más solicitado</div>
+      <div class="bento-shine"></div>
+    </div>
+
+    <!-- CARD MEDIANA -->
+    <div class="bento-card bento-md reveal-card" data-delay="80">
+      <div class="bento-glow" style="--glow:#0ea5e9"></div>
+      <div class="bento-icon-big">📝</div>
+      <h3>Exámenes</h3>
+      <p>Resolvemos exámenes, quizzes y pruebas con altos porcentajes de acierto.</p>
+      <div class="bento-shine"></div>
+    </div>
+
+    <!-- CARD MEDIANA -->
+    <div class="bento-card bento-md reveal-card" data-delay="160">
+      <div class="bento-glow" style="--glow:#10b981"></div>
+      <div class="bento-icon-big">📊</div>
+      <h3>Proyectos</h3>
+      <p>Proyectos académicos completos, bien estructurados y listos para presentar.</p>
+      <div class="bento-shine"></div>
+    </div>
+
+    <!-- CARD PEQUEÑA DESTACADA -->
+    <div class="bento-card bento-sm bento-accent reveal-card" data-delay="240">
+      <div class="bento-glow" style="--glow:#f59e0b"></div>
+      <div class="bento-icon-big">💻</div>
+      <h3>Clases Online</h3>
+      <p>Asesorías en vivo personalizadas para dominar cualquier materia.</p>
+      <div class="bento-shine"></div>
+    </div>
+
+    <!-- CARD STAT -->
+    <div class="bento-card bento-stat reveal-card" data-delay="320">
+      <div class="bento-glow" style="--glow:#0ea5e9"></div>
+      <span class="big-num">200<sup>+</sup></span>
+      <span class="big-lbl">alumnos satisfechos</span>
+      <div class="bento-shine"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== EQUIPO ===== -->
 <section class="team-section" id="equipo">
-    <div class="section-header">
-        <span class="pill">Conoce al equipo</span>
-        <h2>Especialistas que resuelven tu problema</h2>
-        <p>Cada solicitud va al experto adecuado según tu materia.</p>
+  <div class="section-label reveal-up">El equipo</div>
+  <h2 class="section-title reveal-up">Especialistas reales<br><em>para cada materia.</em></h2>
+
+  <div class="team-grid">
+
+    <div class="team-card reveal-card" data-delay="0">
+      <div class="team-img-wrap">
+        <img src="https://i.ibb.co/gMN7NPXr/Whats-App-Image-2026-01-15-at-4-39-47-AM-1.jpg" alt="Alejandro">
+        <div class="team-glow" style="--gc:#6366f1"></div>
+      </div>
+      <div class="team-info">
+        <h3>Alejandro</h3>
+        <span class="team-role">Finanzas &amp; Negocios</span>
+        <p>Estudiante de Finanzas en el Tec. Apasionado por idiomas, viajes y aprendizaje continuo.</p>
+        <div class="team-tags">
+          <span>Negocios</span><span>Finanzas</span><span>Inglés</span><span>Francés</span>
+        </div>
+      </div>
     </div>
 
-    <div class="team-grid">
-
-        <div class="team-card">
-            <div class="team-img">
-                <img src="https://i.ibb.co/gMN7NPXr/Whats-App-Image-2026-01-15-at-4-39-47-AM-1.jpg" alt="Alejandro">
-            </div>
-            <h3>Alejandro</h3>
-            <span class="role">Finanzas y Negocios</span>
-            <p>Estudiante de Finanzas en el Tec, apasionado por los idiomas, los viajes y el aprendizaje continuo.</p>
-            <div class="skills">
-                Negocios Internacionales · Finanzas · Administración · Historia · Español · Inglés · Francés · Matemáticas
-            </div>
+    <div class="team-card reveal-card" data-delay="80">
+      <div class="team-img-wrap">
+        <img src="https://i.ibb.co/x9yDQMt/Whats-App-Image-2026-01-16-at-3-43-35-AM.jpg" alt="Alberto">
+        <div class="team-glow" style="--gc:#0ea5e9"></div>
+      </div>
+      <div class="team-info">
+        <h3>Alberto</h3>
+        <span class="team-role">Ingeniería &amp; Ciencias</span>
+        <p>Ingeniero en recursos hídricos. Sólida formación en matemáticas, física y química.</p>
+        <div class="team-tags">
+          <span>Cálculo</span><span>Física</span><span>Química</span><span>Fluidos</span>
         </div>
-
-        <div class="team-card">
-            <div class="team-img">
-                <img src="https://i.ibb.co/x9yDQMt/Whats-App-Image-2026-01-16-at-3-43-35-AM.jpg" alt="Alberto">
-            </div>
-            <h3>Alberto</h3>
-            <span class="role">Ingeniería y Ciencias Exactas</span>
-            <p>Ingeniero en recursos hídricos con sólida formación en matemáticas, física y química.</p>
-            <div class="skills">
-                Cálculo · Ecuaciones Diferenciales · Física · Química · Mecánica de Fluidos · Hidrología
-            </div>
-        </div>
-
-        <div class="team-card">
-            <div class="team-img">
-                <img src="https://i.ibb.co/c5wVMZ0/Whats-App-Image-2026-01-15-at-6-16-51-AM.jpg" alt="Especialista en Psicología">
-            </div>
-            <h3>Especialista</h3>
-            <span class="role">Psicología y Desarrollo</span>
-            <p>Profesional en Psicología con enfoque en desarrollo profesional y organizacional.</p>
-            <div class="skills">
-                Psicología Organizacional · Neuropsicología · Teorías de la Personalidad · Ensayos · Tesis
-            </div>
-        </div>
-
-        <div class="team-card">
-            <div class="team-img">
-                <img src="img/roberto.jpg" alt="Roberto">
-            </div>
-            <h3>Roberto</h3>
-            <span class="role">Fundador · Ing. en Computación</span>
-            <p>Creador de ProTareas e ingeniero en computación. Especialista en tecnología y programación.</p>
-            <div class="skills">
-                Programación · Bases de Datos · Sistemas · Proyectos Tecnológicos · Soporte Académico Digital
-            </div>
-        </div>
-
+      </div>
     </div>
+
+    <div class="team-card reveal-card" data-delay="160">
+      <div class="team-img-wrap">
+        <img src="https://i.ibb.co/c5wVMZ0/Whats-App-Image-2026-01-15-at-6-16-51-AM.jpg" alt="Psicología">
+        <div class="team-glow" style="--gc:#10b981"></div>
+      </div>
+      <div class="team-info">
+        <h3>Especialista</h3>
+        <span class="team-role">Psicología &amp; Desarrollo</span>
+        <p>Profesional con enfoque en desarrollo organizacional, ensayos y tesis de alto nivel.</p>
+        <div class="team-tags">
+          <span>Psicología</span><span>Ensayos</span><span>Tesis</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card reveal-card" data-delay="240">
+      <div class="team-img-wrap">
+        <img src="img/roberto.jpg" alt="Roberto">
+        <div class="team-glow" style="--gc:#f59e0b"></div>
+      </div>
+      <div class="team-info">
+        <h3>Roberto</h3>
+        <span class="team-role">Fundador · Ing. Computación</span>
+        <p>Creador de ProTareas. Especialista en tecnología, programación y proyectos digitales.</p>
+        <div class="team-tags">
+          <span>Programación</span><span>BD</span><span>Sistemas</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<!-- ================= TESTIMONIOS ================= -->
-<section class="testimonials" id="testimonios">
-    <div class="section-header">
-        <span class="pill">Reseñas</span>
-        <h2>Lo que dicen nuestros estudiantes</h2>
-    </div>
-    <p class="testimonials-sub">Opiniones reales de alumnos que confiaron en nosotros</p>
+<!-- ===== TESTIMONIOS — MARQUEE INFINITO ===== -->
+<section class="testimonials-section" id="testimonios">
+  <div class="section-label reveal-up">Reseñas</div>
+  <h2 class="section-title reveal-up">Lo que dicen<br><em>nuestros alumnos.</em></h2>
 
-    <div class="testimonials-wrapper">
-    <div class="testimonials-track">
-
-        <div class="testimonial"><div class="avatar">S</div><h4>Solecito Cortes</h4><div class="stars">★★★★★</div><p>Excelente servicio 👍🏻</p></div>
-        <div class="testimonial"><div class="avatar">M</div><h4>Makela Centeno</h4><div class="stars">★★★★★</div><p>Es un gran apoyo, muy puntual y confiable.</p></div>
-        <div class="testimonial"><div class="avatar">A</div><h4>Andrea Villagomez</h4><div class="stars">★★★★★</div><p>Excelente servicio, lo recomiendo totalmente. 100% confiable 👏🏻</p></div>
-        <div class="testimonial"><div class="avatar">I</div><h4>Ivan Estudillo</h4><div class="stars">★★★★★</div><p>Excelente servicio, confiable y de gran apoyo.</p></div>
-        <div class="testimonial"><div class="avatar">A</div><h4>Avigail Gutiérrez</h4><div class="stars">★★★★★</div><p>Muy confiable mil ✨</p></div>
-        <div class="testimonial"><div class="avatar">K</div><h4>Karla Sanchez</h4><div class="stars">★★★★★</div><p>Siempre puntual y confiable 10/10 🫡</p></div>
-        <div class="testimonial"><div class="avatar">V</div><h4>Vivian Lizarraga</h4><div class="stars">★★★★★</div><p>Excelente servicio, y súper confiable.</p></div>
-        <div class="testimonial"><div class="avatar">M</div><h4>Mary Pena</h4><div class="stars">★★★★★</div><p>Muy buen servicio.</p></div>
-        <div class="testimonial"><div class="avatar">L</div><h4>Luis Jaime Castro</h4><div class="stars">★★★★★</div><p>Recomendado al 100%, excelente servicio.</p></div>
-        <div class="testimonial"><div class="avatar">I</div><h4>Idalia Galindo</h4><div class="stars">★★★★★</div><p>Muy buen servicio, lo recomiendo al 100% ⭐️</p></div>
-        <div class="testimonial"><div class="avatar">I</div><h4>Ivan Chvz</h4><div class="stars">★★★★★</div><p>Excelente servicio y muy confiable.</p></div>
-        <div class="testimonial"><div class="avatar">M</div><h4>Maria Medellín</h4><div class="stars">★★★★★</div><p>Me salvó de malas notas. Trabajos de excelente nivel.</p></div>
-        <div class="testimonial"><div class="avatar">P</div><h4>Patty Espinoza</h4><div class="stars">★★★★★</div><p>Trabajos de calidad, puntuales y profesionales 🙏</p></div>
-        <div class="testimonial"><div class="avatar">S</div><h4>Santana Ruiz</h4><div class="stars">★★★★★</div><p>Excelente servicio, rápido y eficaz.</p></div>
-        <div class="testimonial"><div class="avatar">E</div><h4>Emanuel</h4><div class="stars">★★★★★</div><p>Muy buenos trabajos y muy puntual 💯</p></div>
-        <div class="testimonial"><div class="avatar">M</div><h4>Michael Ehuan</h4><div class="stars">★★★★★</div><p>Excelente servicio. Lo recomiendo.</p></div>
-        <div class="testimonial"><div class="avatar">V</div><h4>Victoria Quijas</h4><div class="stars">★★★★★</div><p>Me ayudó en actividades muy importantes.</p></div>
-        <div class="testimonial"><div class="avatar">C</div><h4>Carmen Rojas</h4><div class="stars">★★★★★</div><p>Excelentes trabajos, puntualidad y eficacia.</p></div>
-        <div class="testimonial"><div class="avatar">C</div><h4>Cynthia Castro</h4><div class="stars">★★★★★</div><p>Muy profesional, entrega en tiempo y forma 🙌</p></div>
-        <div class="testimonial"><div class="avatar">G</div><h4>Gary Gonzalez</h4><div class="stars">★★★★★</div><p>Me apoyó en todo momento, tiempo y hora 👍</p></div>
-        <div class="testimonial"><div class="avatar">N</div><h4>Naren Moreno</h4><div class="stars">★★★★★</div><p>Trabajo de muy buena calidad y confianza.</p></div>
-
+  <!-- Fila 1 — hacia la derecha -->
+  <div class="marquee-wrap">
+    <div class="marquee-track track-1">
+      <div class="tcard"><div class="tav">S</div><div><strong>Solecito Cortes</strong><div class="ts">★★★★★</div><p>Excelente servicio 👍🏻</p></div></div>
+      <div class="tcard"><div class="tav">M</div><div><strong>Makela Centeno</strong><div class="ts">★★★★★</div><p>Muy puntual y confiable.</p></div></div>
+      <div class="tcard"><div class="tav">A</div><div><strong>Andrea Villagomez</strong><div class="ts">★★★★★</div><p>100% confiable 👏🏻</p></div></div>
+      <div class="tcard"><div class="tav">I</div><div><strong>Ivan Estudillo</strong><div class="ts">★★★★★</div><p>Confiable y de gran apoyo.</p></div></div>
+      <div class="tcard"><div class="tav">K</div><div><strong>Karla Sanchez</strong><div class="ts">★★★★★</div><p>Siempre puntual 10/10 🫡</p></div></div>
+      <div class="tcard"><div class="tav">V</div><div><strong>Vivian Lizarraga</strong><div class="ts">★★★★★</div><p>Excelente y súper confiable.</p></div></div>
+      <div class="tcard"><div class="tav">M</div><div><strong>Maria Medellín</strong><div class="ts">★★★★★</div><p>Me salvó de malas notas.</p></div></div>
+      <div class="tcard"><div class="tav">P</div><div><strong>Patty Espinoza</strong><div class="ts">★★★★★</div><p>Calidad y puntualidad 🙏</p></div></div>
+      <!-- duplicados para bucle -->
+      <div class="tcard"><div class="tav">S</div><div><strong>Solecito Cortes</strong><div class="ts">★★★★★</div><p>Excelente servicio 👍🏻</p></div></div>
+      <div class="tcard"><div class="tav">M</div><div><strong>Makela Centeno</strong><div class="ts">★★★★★</div><p>Muy puntual y confiable.</p></div></div>
+      <div class="tcard"><div class="tav">A</div><div><strong>Andrea Villagomez</strong><div class="ts">★★★★★</div><p>100% confiable 👏🏻</p></div></div>
+      <div class="tcard"><div class="tav">I</div><div><strong>Ivan Estudillo</strong><div class="ts">★★★★★</div><p>Confiable y de gran apoyo.</p></div></div>
+      <div class="tcard"><div class="tav">K</div><div><strong>Karla Sanchez</strong><div class="ts">★★★★★</div><p>Siempre puntual 10/10 🫡</p></div></div>
+      <div class="tcard"><div class="tav">V</div><div><strong>Vivian Lizarraga</strong><div class="ts">★★★★★</div><p>Excelente y súper confiable.</p></div></div>
+      <div class="tcard"><div class="tav">M</div><div><strong>Maria Medellín</strong><div class="ts">★★★★★</div><p>Me salvó de malas notas.</p></div></div>
+      <div class="tcard"><div class="tav">P</div><div><strong>Patty Espinoza</strong><div class="ts">★★★★★</div><p>Calidad y puntualidad 🙏</p></div></div>
     </div>
+  </div>
+
+  <!-- Fila 2 — hacia la izquierda -->
+  <div class="marquee-wrap" style="margin-top:20px">
+    <div class="marquee-track track-2">
+      <div class="tcard"><div class="tav" style="background:#6366f1">E</div><div><strong>Emanuel</strong><div class="ts">★★★★★</div><p>Muy buenos trabajos 💯</p></div></div>
+      <div class="tcard"><div class="tav" style="background:#10b981">C</div><div><strong>Carmen Rojas</strong><div class="ts">★★★★★</div><p>Puntualidad y eficacia.</p></div></div>
+      <div class="tcard"><div class="tav" style="background:#f59e0b">G</div><div><strong>Gary Gonzalez</strong><div class="ts">★★★★★</div><p>Me apoyó en todo momento 👍</p></div></div>
+      <div class="tcard"><div class="tav" style="background:#ec4899">N</div><div><strong>Naren Moreno</strong><div class="ts">★★★★★</div><p>Buena calidad y confianza.</p></div></div>
+      <div class="tcard"><div class="tav" style="background:#0ea5e9">L</div><div><strong>Luis Castro</strong><div class="ts">★★★★★</div><p>Recomendado al 100%.</p></div></div>
+      <div class="tcard"><div class="tav" style="background:#8b5cf6">C</div><div><strong>Cynthia Castro</strong><div class="ts">★★★★★</div><p>Entrega en tiempo y forma 🙌</p></div></div>
+      <div class="tcard"><div class="tav" style="background:#ef4444">S</div><div><strong>Santana Ruiz</strong><div class="ts">★★★★★</div><p>Rápido y eficaz.</p></div></div>
+      <div class="tcard"><div class="tav" style="background:#14b8a6">A</div><div><strong>Avigail Gutiérrez</strong><div class="ts">★★★★★</div><p>Muy confiable ✨</p></div></div>
+      <!-- duplicados -->
+      <div class="tcard"><div class="tav" style="background:#6366f1">E</div><div><strong>Emanuel</strong><div class="ts">★★★★★</div><p>Muy buenos trabajos 💯</p></div></div>
+      <div class="tcard"><div class="tav" style="background:#10b981">C</div><div><strong>Carmen Rojas</strong><div class="ts">★★★★★</div><p>Puntualidad y eficacia.</p></div></div>
+      <div class="tcard"><div class="tav" style="background:#f59e0b">G</div><div><strong>Gary Gonzalez</strong><div class="ts">★★★★★</div><p>Me apoyó en todo momento 👍</p></div></div>
+      <div class="tcard"><div class="tav" style="background:#ec4899">N</div><div><strong>Naren Moreno</strong><div class="ts">★★★★★</div><p>Buena calidad y confianza.</p></div></div>
+      <div class="tcard"><div class="tav" style="background:#0ea5e9">L</div><div><strong>Luis Castro</strong><div class="ts">★★★★★</div><p>Recomendado al 100%.</p></div></div>
+      <div class="tcard"><div class="tav" style="background:#8b5cf6">C</div><div><strong>Cynthia Castro</strong><div class="ts">★★★★★</div><p>Entrega en tiempo y forma 🙌</p></div></div>
+      <div class="tcard"><div class="tav" style="background:#ef4444">S</div><div><strong>Santana Ruiz</strong><div class="ts">★★★★★</div><p>Rápido y eficaz.</p></div></div>
+      <div class="tcard"><div class="tav" style="background:#14b8a6">A</div><div><strong>Avigail Gutiérrez</strong><div class="ts">★★★★★</div><p>Muy confiable ✨</p></div></div>
     </div>
+  </div>
 </section>
 
-<!-- ================= COTIZACIÓN ================= -->
-<section class="quote-section" id="contacto">
-    <div class="quote-container">
+<!-- ===== CONTACTO ===== -->
+<section class="contact-section" id="contacto">
+  <div class="contact-inner">
 
-        <!-- FORMULARIO -->
-        <form class="quote-form">
-            <h3>Solicita tu cotización</h3>
+    <div class="contact-left reveal-up">
+      <div class="section-label">Contacto</div>
+      <h2 class="section-title">Respuesta<br><em>inmediata.</em></h2>
+      <p class="contact-sub">Llena el formulario y uno de nuestros asesores te responde en minutos con una propuesta personalizada.</p>
+      <ul class="perks-list">
+        <li><span class="perk-dot" style="background:#10b981"></span>Atención inmediata por WhatsApp</li>
+        <li><span class="perk-dot" style="background:#6366f1"></span>Precios justos y accesibles</li>
+        <li><span class="perk-dot" style="background:#0ea5e9"></span>Entrega garantizada</li>
+        <li><span class="perk-dot" style="background:#f59e0b"></span>Confidencialidad total</li>
+      </ul>
+    </div>
 
-            <div class="form-row">
-                <input type="text" name="nombre" placeholder="Nombre *" required>
-                <input type="text" name="apellidos" placeholder="Apellidos">
-            </div>
-
-            <div class="form-row">
-                <input type="email" name="email" placeholder="Correo electrónico">
-                <input type="tel" name="whatsapp" placeholder="WhatsApp *" required>
-            </div>
-
-            <div class="form-row">
-                <input type="text" name="carrera" placeholder="Carrera *" required>
-                <input type="text" name="materia" placeholder="Materia *" required>
-            </div>
-
-            <textarea name="detalle" placeholder="Describe el servicio que necesitas *" required></textarea>
-
-            <div class="form-row">
-                <input type="date" name="fecha">
-                <input type="time" name="hora">
-            </div>
-
-            <label class="file-upload">
-                📎 Adjuntar archivos (opcional)
-                <input type="file" multiple>
-            </label>
-
-            <button type="submit" class="btn btn-wa btn-lg" style="justify-content:center;">
-                <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:#fff;flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                Enviar por WhatsApp
-            </button>
-
-            <small>* Al enviar, se abrirá WhatsApp con tu solicitud lista.</small>
-        </form>
-
-        <!-- INFO DERECHA -->
-        <div class="quote-info">
-            <span class="pill">Cotización rápida</span>
-            <h2>Respuesta inmediata, sin complicaciones</h2>
-            <p>
-                Llena el formulario y te contactamos en minutos con una propuesta
-                personalizada. 100% confidencial.
-            </p>
-
-            <ul>
-                <li><div class="check-icon">✓</div> Atención inmediata por WhatsApp</li>
-                <li><div class="check-icon">✓</div> Precios justos y accesibles</li>
-                <li><div class="check-icon">✓</div> Entrega garantizada</li>
-                <li><div class="check-icon">✓</div> Confidencialidad total</li>
-            </ul>
+    <form class="contact-form reveal-up" id="quoteForm" style="transition-delay:.15s">
+      <h3>Solicitar cotización</h3>
+      <div class="form-row">
+        <div class="field-wrap">
+          <input type="text" name="nombre" id="fnombre" required autocomplete="off">
+          <label for="fnombre">Nombre *</label>
         </div>
+        <div class="field-wrap">
+          <input type="text" name="apellidos" id="fapellidos" autocomplete="off">
+          <label for="fapellidos">Apellidos</label>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field-wrap">
+          <input type="tel" name="whatsapp" id="fwa" required autocomplete="off">
+          <label for="fwa">WhatsApp *</label>
+        </div>
+        <div class="field-wrap">
+          <input type="email" name="email" id="femail" autocomplete="off">
+          <label for="femail">Correo electrónico</label>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field-wrap">
+          <input type="text" name="carrera" id="fcarrera" required autocomplete="off">
+          <label for="fcarrera">Carrera *</label>
+        </div>
+        <div class="field-wrap">
+          <input type="text" name="materia" id="fmateria" required autocomplete="off">
+          <label for="fmateria">Materia *</label>
+        </div>
+      </div>
+      <div class="field-wrap field-full">
+        <textarea name="detalle" id="fdetalle" rows="3" required></textarea>
+        <label for="fdetalle">Describe lo que necesitas *</label>
+      </div>
+      <div class="form-row">
+        <div class="field-wrap">
+          <input type="date" name="fecha" id="ffecha">
+          <label for="ffecha" class="always-up">Fecha límite</label>
+        </div>
+        <div class="field-wrap">
+          <input type="time" name="hora" id="fhora">
+          <label for="fhora" class="always-up">Hora</label>
+        </div>
+      </div>
+      <label class="file-drop">
+        <input type="file" multiple>
+        <span>📎 Adjuntar archivos (opcional)</span>
+      </label>
+      <button type="submit" class="btn-submit">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Enviar por WhatsApp
+        <div class="submit-glow"></div>
+      </button>
+      <small>Al enviar se abrirá WhatsApp con tu solicitud lista</small>
+    </form>
 
-    </div>
+  </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
-    <div class="footer-container">
-
-        <div class="footer-brand">
-            <h3>ProTareas</h3>
-            <p>Soluciones académicas rápidas, confiables y profesionales para universitarios.</p>
-            <div class="footer-socials">
-                <!-- WhatsApp -->
-                <a href="https://wa.me/526121234567" target="_blank" aria-label="WhatsApp">
-                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                </a>
-                <!-- Instagram (actualiza el href con tu usuario) -->
-                <a href="https://instagram.com/protareas" target="_blank" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                </a>
-            </div>
-        </div>
-
-        <div class="footer-links">
-            <h4>Servicios</h4>
-            <a href="#servicios">Tareas</a>
-            <a href="#servicios">Exámenes</a>
-            <a href="#servicios">Proyectos</a>
-            <a href="#servicios">Clases Online</a>
-        </div>
-
-        <div class="footer-links">
-            <h4>Empresa</h4>
-            <a href="#equipo">Equipo</a>
-            <a href="#testimonios">Testimonios</a>
-            <a href="#contacto">Contacto</a>
-        </div>
-
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="logo">Pro<span>Tareas</span></a>
+      <p>Soluciones académicas rápidas, confiables y profesionales para universitarios.</p>
+      <div class="footer-socials">
+        <a href="https://wa.me/526121234567" target="_blank" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </a>
+        <a href="https://instagram.com/protareas" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
     </div>
-
-    <div class="footer-bottom">
-        <span>© 2026 Pro Tareas. Todos los derechos reservados.</span>
-        <span>Hecho con ❤️ para estudiantes</span>
+    <div class="footer-col">
+      <h4>Servicios</h4>
+      <a href="#servicios">Tareas</a>
+      <a href="#servicios">Exámenes</a>
+      <a href="#servicios">Proyectos</a>
+      <a href="#servicios">Clases Online</a>
     </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <a href="#equipo">Equipo</a>
+      <a href="#testimonios">Reseñas</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ProTareas — Todos los derechos reservados.</span>
+    <span>Hecho con ❤️ para estudiantes</span>
+  </div>
 </footer>
 
 <script src="js/main.js"></script>
