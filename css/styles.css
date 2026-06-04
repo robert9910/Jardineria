@@ -762,3 +762,184 @@ nav a:hover { color: var(--brand); }
     .float-icon { width:36px; height:36px; font-size:16px; }
     .fc-value { font-size: 13px; }
 }
+
+/* =============================================
+   ANIMACIONES 3D v3 — EXTRAS
+   ============================================= */
+
+/* ===== CURSOR PERSONALIZADO ===== */
+.cursor-dot {
+    position: fixed;
+    width: 8px; height: 8px;
+    background: var(--brand);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    mix-blend-mode: difference;
+    transition: transform .05s;
+}
+.cursor-ring {
+    position: fixed;
+    width: 40px; height: 40px;
+    border: 1.5px solid var(--brand);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99998;
+    opacity: .6;
+    transition: width .2s, height .2s, opacity .2s;
+}
+.cursor-ring.cursor-hover {
+    width: 60px; height: 60px;
+    opacity: .3;
+    background: rgba(14,165,233,.08);
+}
+@media (pointer: coarse) {
+    .cursor-dot, .cursor-ring { display: none; }
+}
+
+/* ===== SCROLL REVEAL ===== */
+.pre-reveal {
+    opacity: 0;
+    transform: perspective(600px) rotateX(20deg) translateY(40px);
+}
+.pre-reveal.revealed {
+    opacity: 1 !important;
+    transform: perspective(600px) rotateX(0deg) translateY(0) !important;
+}
+
+.pre-reveal-slide {
+    opacity: 0;
+    transform: translateY(30px);
+}
+.pre-reveal-slide.revealed {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.pre-text {
+    opacity: 0;
+    transform: translateY(28px);
+}
+.pre-text.text-revealed {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* ===== HERO BLOB MORPH ===== */
+.hero-blob {
+    transition: border-radius .1s ease;
+    will-change: border-radius, transform;
+}
+
+/* ===== IMAGEN HERO — 3D ===== */
+.hero-image {
+    will-change: transform;
+    transform-style: preserve-3d;
+}
+.student {
+    will-change: transform;
+    transition: transform .05s linear;
+}
+
+/* ===== TILT CARDS ===== */
+.service-card,
+.team-card,
+.testimonial {
+    will-change: transform;
+    transform-style: preserve-3d;
+}
+
+/* ===== FLOAT CARDS — motion más intenso ===== */
+.float-card {
+    will-change: transform;
+    transition: transform .08s linear !important;
+}
+
+/* ===== LOGO 3D ===== */
+.logo {
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+/* ===== BOTONES MAGNÉTICOS ===== */
+.btn {
+    will-change: transform;
+}
+
+/* ===== BRILLO (shine) ===== */
+.card-shine {
+    pointer-events: none;
+}
+
+/* ===== STATS BAR — fondo parallax ===== */
+.stats-bar {
+    background-attachment: local;
+}
+
+/* ===== ICONS SPIN AL SCROLL ===== */
+.service-icon {
+    transition: transform .1s linear;
+    will-change: transform;
+}
+
+/* ===== GLOW EN INPUTS AL FOCUS ===== */
+.quote-form input:focus,
+.quote-form textarea:focus {
+    box-shadow: 0 0 0 3px rgba(14,165,233,.15);
+    transform: scale(1.01);
+    transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+
+/* ===== HERO EYEBROW PULSE ===== */
+.hero-eyebrow .dot {
+    box-shadow: 0 0 0 0 rgba(14,165,233,.5);
+    animation: pulseRing 2s infinite;
+}
+@keyframes pulseRing {
+    0%   { box-shadow: 0 0 0 0 rgba(14,165,233,.5); }
+    70%  { box-shadow: 0 0 0 10px rgba(14,165,233,0); }
+    100% { box-shadow: 0 0 0 0 rgba(14,165,233,0); }
+}
+
+/* ===== FLOAT CARDS ANIMACIÓN INDEPENDIENTE ===== */
+.float-card.card-1 { animation: floatA 4.5s ease-in-out infinite; }
+.float-card.card-2 { animation: floatB 3.8s ease-in-out infinite; }
+
+@keyframes floatA {
+    0%,100% { transform: translateY(0) rotate(-1deg); }
+    50%     { transform: translateY(-14px) rotate(1deg); }
+}
+@keyframes floatB {
+    0%,100% { transform: translateY(0) rotate(1deg); }
+    50%     { transform: translateY(-10px) rotate(-1deg); }
+}
+
+/* Desactivar float en parallax (JS lo controla) */
+@media (hover: hover) {
+    .float-card.card-1,
+    .float-card.card-2 {
+        animation: none;
+    }
+}
+
+/* ===== GRID TEAM — 4 columnas (corregido) ===== */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    margin-top: 60px;
+}
+@media (max-width: 1100px) {
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .team-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== TRANSITION GLOBAL SUAVE ===== */
+* {
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+
+/* ===== CANVAS PARTÍCULAS ===== */
+#particles-bg { opacity: .4; }
