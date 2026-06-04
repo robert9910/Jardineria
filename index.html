@@ -1,94 +1,3 @@
-
-Claude terminó la respuesta
-
-styles.css
-css
-
-
-index.html
-311 líneas
-
-html
-
-
-main.js
-73 líneas
-
-js
-
-estoy desarrollando mi pagina web de asesores academicos, me ayudas a mejorarla?
-
-2:04 a.m.
-
-Vio 2 archivos
-Vio 2 archivos
-Ya leí todo tu código. Tu página tiene muy buena base — estructura sólida, responsive, carrusel de testimonios, equipo. Hay varias cosas concretas que se pueden mejorar. Antes de hacerlo, dime qué dirección prefieres:
-
-P: ¿Qué tipo de mejora quieres primero?
-R: Diseño visual más moderno
-
-P: ¿Tienes número de WhatsApp para conectar el formulario de cotización?
-R: Sí, lo tengo
-
-2:04 a.m.
-Perfecto. Voy a hacer un rediseño visual completo — más premium, más moderno, con mejor jerarquía visual. Y al final te pido el número de WhatsApp para conectar el formulario.
-
-Ahora voy a construir la versión mejorada completa con:
-
-Diseño más premium y moderno
-Header con hamburger menu en móvil
-Hero más impactante con mejor tipografía
-Sección equipo mejor integrada con título
-Formulario que abre WhatsApp directo
-Footer mejorado con redes sociales
-
-Se crearon 3 archivos, se ejecutaron 2 comandos, archivo leído
-Se crearon 3 archivos, se ejecutaron 2 comandos, archivo leído
-Aquí tienes los 3 archivos actualizados. Esto es lo que cambió:
-
-Diseño visual
-
-Nueva tipografía: DM Sans (titulares) + Inter (cuerpo) — más moderna y profesional
-Paleta refinada: azul oscuro 
-#0F172A + cyan vibrante 
-#0EA5E9
-Header sticky con efecto glassmorphism (blur al hacer scroll)
-Sección equipo ahora tiene su propio encabezado con sección id="equipo" en el nav
-Stats bar animada (los números cuentan solos al hacerse visibles)
-Cards con borde superior que aparece al hacer hover
-Reveal on scroll en todas las tarjetas
-Funcionalidad
-
-Menú hamburger animado en móvil (antes el nav simplemente desaparecía)
-El formulario ahora abre WhatsApp directamente con todos los datos del alumno pre-escritos en el mensaje
-Footer con links organizados y íconos de WhatsApp + Instagram
-Una sola cosa que necesitas hacer antes de publicar:
-
-En main.js, línea 7, cambia el número:
-
-js
-const WA_NUMBER = "526121234567"; // ← pon tu número aquí
-Y en el footer del index.html, actualiza también el href del ícono de WhatsApp y el de Instagram con tu usuario real.
-
-
-Index
-Código · HTML 
-
-Styles
-Código · CSS 
-
-Main
-JS 
-
-
-
-
-
-Claude es IA y puede cometer errores. Por favor, verifica nuevamente las respuestas.
-
-
-raw
-Index · HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -99,27 +8,27 @@ Index · HTML
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
- 
+
 <!-- ================= HEADER ================= -->
 <header class="header">
     <a href="#" class="logo">Pro<span>Tareas</span></a>
- 
+
     <nav>
         <a href="#servicios">Servicios</a>
         <a href="#equipo">Equipo</a>
         <a href="#testimonios">Testimonios</a>
         <a href="#contacto">Contacto</a>
     </nav>
- 
+
     <a href="#contacto" class="btn">Cotizar ahora</a>
- 
+
     <button class="hamburger" aria-label="Menú">
         <span></span>
         <span></span>
         <span></span>
     </button>
 </header>
- 
+
 <!-- Menú móvil -->
 <nav class="mobile-nav">
     <a href="#servicios">Servicios</a>
@@ -127,19 +36,19 @@ Index · HTML
     <a href="#testimonios">Testimonios</a>
     <a href="#contacto">Contactar por WhatsApp</a>
 </nav>
- 
+
 <!-- ================= HERO ================= -->
 <section class="hero">
- 
+
     <div class="hero-text">
- 
+
         <div class="hero-eyebrow">
             <div class="dot"></div>
             <span>Disponible ahora</span>
         </div>
- 
+
         <h1>Hacemos tus <em>tareas, exámenes</em> y proyectos</h1>
- 
+
         <!-- Carrusel de servicios -->
         <div class="carousel-wrap">
             <div class="items">
@@ -149,29 +58,29 @@ Index · HTML
                 <div class="item"><div class="icon">💻</div> Clases online</div>
             </div>
         </div>
- 
+
         <div class="hero-cta">
             <a href="#contacto" class="btn btn-lg">Solicitar cotización</a>
             <a href="#servicios" class="btn btn-outline btn-lg">Ver servicios</a>
         </div>
- 
+
         <div class="hero-trust">
             <span class="stars">★★★★★</span>
             <strong>+200 alumnos</strong>
             <span>nos recomiendan</span>
         </div>
- 
+
     </div>
- 
+
     <div class="hero-image">
         <div class="hero-blob"></div>
- 
+
         <img
           src="https://i.ibb.co/wFMYxgjc/como-ser-un-buen-estudiante-removebg-preview.png"
           alt="Estudiante"
           class="student"
         >
- 
+
         <!-- Floating cards -->
         <div class="float-card card-1">
             <div class="float-icon">✓</div>
@@ -180,7 +89,7 @@ Index · HTML
                 <div class="fc-value">100% confiable</div>
             </div>
         </div>
- 
+
         <div class="float-card card-2">
             <div class="float-icon">⚡</div>
             <div>
@@ -189,9 +98,9 @@ Index · HTML
             </div>
         </div>
     </div>
- 
+
 </section>
- 
+
 <!-- ================= STATS BAR ================= -->
 <div class="stats-bar">
     <div class="stat-item">
@@ -211,7 +120,7 @@ Index · HTML
         <span class="lbl">Estrellas promedio</span>
     </div>
 </div>
- 
+
 <!-- ================= SERVICIOS ================= -->
 <section class="services" id="servicios">
     <div class="section-header">
@@ -219,36 +128,36 @@ Index · HTML
         <h2>Todo lo que necesitas para tus materias</h2>
         <p>Soluciones académicas rápidas, profesionales y 100% confidenciales.</p>
     </div>
- 
+
     <div class="services-grid">
- 
+
         <div class="service-card">
             <div class="service-icon">📚</div>
             <h3>Tareas</h3>
             <p>Realizamos tareas de todas las materias con calidad profesional y entregas puntuales.</p>
         </div>
- 
+
         <div class="service-card">
             <div class="service-icon">📝</div>
             <h3>Exámenes</h3>
             <p>Resolvemos exámenes, quizzes y pruebas con altos porcentajes de acierto.</p>
         </div>
- 
+
         <div class="service-card">
             <div class="service-icon">📊</div>
             <h3>Proyectos</h3>
             <p>Proyectos académicos completos, bien estructurados y presentables.</p>
         </div>
- 
+
         <div class="service-card">
             <div class="service-icon">💻</div>
             <h3>Clases Online</h3>
             <p>Te ayudamos en clases en vivo y asesorías personalizadas.</p>
         </div>
- 
+
     </div>
 </section>
- 
+
 <!-- ================= EQUIPO ================= -->
 <section class="team-section" id="equipo">
     <div class="section-header">
@@ -256,9 +165,9 @@ Index · HTML
         <h2>Especialistas que resuelven tu problema</h2>
         <p>Cada solicitud va al experto adecuado según tu materia.</p>
     </div>
- 
+
     <div class="team-grid">
- 
+
         <div class="team-card">
             <div class="team-img">
                 <img src="https://i.ibb.co/gMN7NPXr/Whats-App-Image-2026-01-15-at-4-39-47-AM-1.jpg" alt="Alejandro">
@@ -270,7 +179,7 @@ Index · HTML
                 Negocios Internacionales · Finanzas · Administración · Historia · Español · Inglés · Francés · Matemáticas
             </div>
         </div>
- 
+
         <div class="team-card">
             <div class="team-img">
                 <img src="https://i.ibb.co/x9yDQMt/Whats-App-Image-2026-01-16-at-3-43-35-AM.jpg" alt="Alberto">
@@ -282,7 +191,7 @@ Index · HTML
                 Cálculo · Ecuaciones Diferenciales · Física · Química · Mecánica de Fluidos · Hidrología
             </div>
         </div>
- 
+
         <div class="team-card">
             <div class="team-img">
                 <img src="https://i.ibb.co/c5wVMZ0/Whats-App-Image-2026-01-15-at-6-16-51-AM.jpg" alt="Especialista en Psicología">
@@ -294,7 +203,7 @@ Index · HTML
                 Psicología Organizacional · Neuropsicología · Teorías de la Personalidad · Ensayos · Tesis
             </div>
         </div>
- 
+
         <div class="team-card">
             <div class="team-img">
                 <img src="img/roberto.jpg" alt="Roberto">
@@ -306,10 +215,10 @@ Index · HTML
                 Programación · Bases de Datos · Sistemas · Proyectos Tecnológicos · Soporte Académico Digital
             </div>
         </div>
- 
+
     </div>
 </section>
- 
+
 <!-- ================= TESTIMONIOS ================= -->
 <section class="testimonials" id="testimonios">
     <div class="section-header">
@@ -317,10 +226,10 @@ Index · HTML
         <h2>Lo que dicen nuestros estudiantes</h2>
     </div>
     <p class="testimonials-sub">Opiniones reales de alumnos que confiaron en nosotros</p>
- 
+
     <div class="testimonials-wrapper">
     <div class="testimonials-track">
- 
+
         <div class="testimonial"><div class="avatar">S</div><h4>Solecito Cortes</h4><div class="stars">★★★★★</div><p>Excelente servicio 👍🏻</p></div>
         <div class="testimonial"><div class="avatar">M</div><h4>Makela Centeno</h4><div class="stars">★★★★★</div><p>Es un gran apoyo, muy puntual y confiable.</p></div>
         <div class="testimonial"><div class="avatar">A</div><h4>Andrea Villagomez</h4><div class="stars">★★★★★</div><p>Excelente servicio, lo recomiendo totalmente. 100% confiable 👏🏻</p></div>
@@ -342,54 +251,54 @@ Index · HTML
         <div class="testimonial"><div class="avatar">C</div><h4>Cynthia Castro</h4><div class="stars">★★★★★</div><p>Muy profesional, entrega en tiempo y forma 🙌</p></div>
         <div class="testimonial"><div class="avatar">G</div><h4>Gary Gonzalez</h4><div class="stars">★★★★★</div><p>Me apoyó en todo momento, tiempo y hora 👍</p></div>
         <div class="testimonial"><div class="avatar">N</div><h4>Naren Moreno</h4><div class="stars">★★★★★</div><p>Trabajo de muy buena calidad y confianza.</p></div>
- 
+
     </div>
     </div>
 </section>
- 
+
 <!-- ================= COTIZACIÓN ================= -->
 <section class="quote-section" id="contacto">
     <div class="quote-container">
- 
+
         <!-- FORMULARIO -->
         <form class="quote-form">
             <h3>Solicita tu cotización</h3>
- 
+
             <div class="form-row">
                 <input type="text" name="nombre" placeholder="Nombre *" required>
                 <input type="text" name="apellidos" placeholder="Apellidos">
             </div>
- 
+
             <div class="form-row">
                 <input type="email" name="email" placeholder="Correo electrónico">
                 <input type="tel" name="whatsapp" placeholder="WhatsApp *" required>
             </div>
- 
+
             <div class="form-row">
                 <input type="text" name="carrera" placeholder="Carrera *" required>
                 <input type="text" name="materia" placeholder="Materia *" required>
             </div>
- 
+
             <textarea name="detalle" placeholder="Describe el servicio que necesitas *" required></textarea>
- 
+
             <div class="form-row">
                 <input type="date" name="fecha">
                 <input type="time" name="hora">
             </div>
- 
+
             <label class="file-upload">
                 📎 Adjuntar archivos (opcional)
                 <input type="file" multiple>
             </label>
- 
+
             <button type="submit" class="btn btn-wa btn-lg" style="justify-content:center;">
                 <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:#fff;flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                 Enviar por WhatsApp
             </button>
- 
+
             <small>* Al enviar, se abrirá WhatsApp con tu solicitud lista.</small>
         </form>
- 
+
         <!-- INFO DERECHA -->
         <div class="quote-info">
             <span class="pill">Cotización rápida</span>
@@ -398,7 +307,7 @@ Index · HTML
                 Llena el formulario y te contactamos en minutos con una propuesta
                 personalizada. 100% confidencial.
             </p>
- 
+
             <ul>
                 <li><div class="check-icon">✓</div> Atención inmediata por WhatsApp</li>
                 <li><div class="check-icon">✓</div> Precios justos y accesibles</li>
@@ -406,14 +315,14 @@ Index · HTML
                 <li><div class="check-icon">✓</div> Confidencialidad total</li>
             </ul>
         </div>
- 
+
     </div>
 </section>
- 
+
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
     <div class="footer-container">
- 
+
         <div class="footer-brand">
             <h3>ProTareas</h3>
             <p>Soluciones académicas rápidas, confiables y profesionales para universitarios.</p>
@@ -428,7 +337,7 @@ Index · HTML
                 </a>
             </div>
         </div>
- 
+
         <div class="footer-links">
             <h4>Servicios</h4>
             <a href="#servicios">Tareas</a>
@@ -436,28 +345,22 @@ Index · HTML
             <a href="#servicios">Proyectos</a>
             <a href="#servicios">Clases Online</a>
         </div>
- 
+
         <div class="footer-links">
             <h4>Empresa</h4>
             <a href="#equipo">Equipo</a>
             <a href="#testimonios">Testimonios</a>
             <a href="#contacto">Contacto</a>
         </div>
- 
+
     </div>
- 
+
     <div class="footer-bottom">
         <span>© 2026 Pro Tareas. Todos los derechos reservados.</span>
         <span>Hecho con ❤️ para estudiantes</span>
     </div>
 </footer>
- 
+
 <script src="js/main.js"></script>
 </body>
 </html>
- 
-
-
-
-
-
