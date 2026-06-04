@@ -466,5 +466,26 @@
 </footer>
 
 <script src="js/main.js"></script>
+
+<!-- CHATBOT -->
+<div class="chat-bubble" id="chatBubble">
+  <div class="chat-bubble-icon open-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+  <div class="chat-bubble-icon close-icon" style="display:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+  <div class="chat-notif">1</div>
+</div>
+<div class="chatbox" id="chatbox">
+  <div class="chatbox-header">
+    <div class="chatbox-avatar">PT</div>
+    <div><div class="chatbox-name">Asistente ProTareas</div><div class="chatbox-status"><span class="status-dot"></span>En l�nea</div></div>
+    <button class="chatbox-close" id="chatboxClose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="chatbox-messages" id="chatMessages">
+    <div class="msg bot"><div class="msg-bubble">�Hola! 👋 Soy el asistente de <strong>ProTareas</strong>. Puedo ayudarte con precios, servicios, equipo y m�s. �En qu� te puedo ayudar?</div><div class="msg-time">Ahora</div></div>
+    <div class="quick-replies" id="quickReplies"><button class="qr-btn" data-msg="�Cu�nto cuestan sus servicios?">💰 Precios</button><button class="qr-btn" data-msg="�Qu� materias cubren?">📚 Materias</button><button class="qr-btn" data-msg="�C�mo funciona el proceso?">&� �C�mo funciona?</button><button class="qr-btn" data-msg="�Es confidencial?">🔒 Privacidad</button></div>
+  </div>
+  <div class="chatbox-input-area"><input type="text" id="chatInput" placeholder="Escribe tu pregunta..." autocomplete="off" maxlength="300"><button id="chatSend"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button></div>
+  <div class="chatbox-footer">Asistente IA � ProTareas 2026</div>
+</div>
+<script src="js/chatbot.js"></script>
 </body>
 </html>
